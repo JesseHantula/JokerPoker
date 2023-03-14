@@ -1,0 +1,137 @@
+C:\Users\jesse\school\ot\viikko1>git log --stat | cat
+'cat' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\jesse\school\ot\viikko1>git log --stat
+commit c1bd585f6183e90eae82ec0ae0b818978dfc7cd0 (HEAD -> master)
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 15:28:43 2023 +0200
+
+    muutos ja lisäys
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 8b09542451d99b12724c40b742fa1892f5b07928
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 15:27:38 2023 +0200
+
+    muutos ja lisäys
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit fc5ec1d2defa5b26a0e495fc99935a9fbbe4b63d
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 15:23:21 2023 +0200
+
+    muutos ja lisäys
+
+ kolmos.txt => kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 69dec98e318009db3b63cc5843eca004e0ea686b
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 15:17:40 2023 +0200
+
+    muutos ja lisäys
+
+ eka.txt    | 2 +-
+ kolmos.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 131e071892d4ded3c7473d77fa5b48816a5510a3
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 15:15:40 2023 +0200
+
+    muutos ja lisäys
+
+ eka.txt    | 2 +-
+ kolmos.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 1f2351d5e3533d6fd592c34a5fbba847f9b9b8ec
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 14:30:58 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit da80edcb353b44056cca66cef715a0a788d2471c
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 14:29:43 2023 +0200
+
+    muutos ja lisäys
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 8f9a07a6d1dc7e3a64e3088c37de9ebf958bbf2a
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 14:25:38 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 548e4ffed40a11de4f5f4fcb2a4994c9eb0025d4
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 14:23:21 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit c103d50d2e7302a287484504cd36e5ba9d37d6c2
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 14:19:05 2023 +0200
+
+    muutos ja lisäys
+
+ stuff/lol.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit e04df258937a2bd9839c2dead7690086c11d9eaf
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 14:16:59 2023 +0200
+
+    muutos ja lisäys
+
+ kolmos.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 6b123d6d61d8d5d3b908e8da1727a59d5e56627d
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 14:13:49 2023 +0200
+
+    muutos ja lisäys
+
+ kolmos.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0c47ebe0c127bb0d7eb9ad1eea327ec12f2c598e
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 14:12:16 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 4aa28a8d961b58b1a0f1f75d408fe81e054eedae
+Author: JesseHantula <jesse.hantula@helsinki.fi>
+Date:   Tue Mar 14 13:46:08 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
