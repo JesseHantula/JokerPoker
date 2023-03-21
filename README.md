@@ -9,5 +9,5 @@
 
 ## Project Information
 ### Project Documentation
-#### [functionalspecification.md](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/functionalspecification.md)
-#### [worktimeaccounting.md](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/worktimeaccounting.md)
+#### [Functional Specification](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/functionalspecification.md)
+#### [Worktime Accounting](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/worktimeaccounting.md)
