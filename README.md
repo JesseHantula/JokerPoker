@@ -6,3 +6,8 @@
 
 ### Week 2
 #### [coveragereport.png](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/laskarit/viikko2/kattavuusraportti.png)
+
+
+### Project Documentation
+#### [functionalspecification.md](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/functionalspecification.md)
+#### [worktimeaccounting.md](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/worktimeaccounting.md)
