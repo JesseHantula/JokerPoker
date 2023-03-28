@@ -18,7 +18,7 @@
 
 ## Designed Functionalities
 #### Apply the following game structure:
-##### * Each player starts with two random cards from the deck, making sure that no player has the same card as another player.
+* Each player starts with two random cards from the deck, making sure that no player has the same card as another player.
 ##### * Each player starts with $250. 
 ##### * Each player takes turns putting down money for the round, each player must put in at least $10 (ante). The player can also drop out (fold) instead of placing down money. Also, each player must have put in the same amount of money (for example, if one player puts down $100, each player must match that amount or drop out). 
 ##### * The dealer places down three cards, all of which can be seen by each player.
