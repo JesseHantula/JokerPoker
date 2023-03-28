@@ -1,13 +1,13 @@
 ```mermaid
 classDiagram
-    Todo "*" --> "1" User
-      class User{
-          username
+    Board --> "2-8" Player
+      class Player{
+          player_piece
           password
       }
-      class Todo{
-          id
-          content
-          done
+      class Board{
+          square
+          dice
+          player
       }
 ```
