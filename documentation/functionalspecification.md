@@ -34,4 +34,4 @@
 * Create a "party mode", where multiple players can take turns playing on the same device.
 * Make multiple options for starting amount of cash, and ante.
 * Create multiple difficulties for the bots, such that the hardest difficulty bots will make smarter decisions, whereas the easier difficulty bots will often make mistakes.
-* Create a leaderboard system such that players can keep track of their wins. 
+* Create a leaderboard system such that players can keep track of their wins (this would also require a login system in most cases). 
