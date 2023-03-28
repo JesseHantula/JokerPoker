@@ -8,9 +8,12 @@ classDiagram
     Player "has" --> "1" Piece
     Player "has" --> Money
     Square "is of" --> Square_Type
-    Square_Type "is" --> Street_Square
+    Square_Type --> Street_Square
+    Square_Type --> Chance
+    Chance --> Card
     Street_Square "has" --> "1-4" House
     Street_Square "has" --> "1" Hotel
+    Street_Square "owned by" --> "1" Player
         class Monopoly{
             player
             board
@@ -53,5 +56,11 @@ classDiagram
         }
         class Money{
             amount
+        }
+        class Chance{
+            card
+        }
+        class Card{
+            function
         }
 ```
