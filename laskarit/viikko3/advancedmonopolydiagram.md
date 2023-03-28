@@ -7,9 +7,11 @@ classDiagram
     Piece "is on" --> Square
     Player "has" --> "1" Piece
     Player "has" --> Money
-    Square "is of" --> Square_Type
-    Square_Type --> Street_Square
-    Square_Type --> Chance
+    Square --> Street_Square
+    Square --> Chance
+    Square --> Jail
+    Square --> Station
+    Square --> Starting_square
     Chance --> Card
     Street_Square "has" --> "1-4" House
     Street_Square "has" --> "1" Hotel
@@ -35,12 +37,14 @@ classDiagram
             next_square
             type
         }
-        class Square_Type{
-            starting_square
-            jail
-            chance
-            station
-            street_square
+        class Jail{
+
+        }
+        class Station{
+
+        }
+        class Starting_Square{
+
         }
         class Street_Square{
             name
