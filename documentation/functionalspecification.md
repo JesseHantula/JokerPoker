@@ -14,7 +14,7 @@
 ##### In the case of a tie (ie. two players have a three of a kind), the player with the higher card wins (ie. a player with three 10's beats a player with three 5's).
 
 ## Players
-##### There is only a one-player mode for this game, and the player can play against 1-5 bots.
+##### There is only a one-player mode for this game, where the player plays against 3 bots.
 
 ## Designed Functionalities
 #### Apply the following game structure:
@@ -32,6 +32,7 @@
 
 ## Additional Functionality Ideas
 * Create a "party mode", where multiple players can take turns playing on the same device.
+* Change the amount of bots the user can play against.
 * Make multiple options for starting amount of cash, and ante.
 * Create multiple difficulties for the bots, such that the hardest difficulty bots will make smarter decisions, whereas the easier difficulty bots will often make mistakes.
 * Create a leaderboard system such that players can keep track of their wins (this would also require a login system in most cases). 
