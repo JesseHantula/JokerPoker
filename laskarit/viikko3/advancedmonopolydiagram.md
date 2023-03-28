@@ -2,7 +2,7 @@
 classDiagram
     Monopoly "played with" --> "2" Dice
     Monopoly "played on" --> "1" Board
-    Monopoly played with" --> "2-8" Player
+    Monopoly "played with" --> "2-8" Player
     Board "has" --> "40" Square
     Piece "is on" --> Square
     Player "has" --> "1" Piece
