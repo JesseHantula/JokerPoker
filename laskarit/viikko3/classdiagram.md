@@ -7,7 +7,9 @@ classDiagram
     Piece --> Square
     Player --> "1" Piece
         class Monopoly{
-
+            player
+            board
+            dice
         }
         class Dice{
 
