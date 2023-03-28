@@ -17,25 +17,19 @@ classDiagram
     Street_Square "has" --> "1" Hotel
     Street_Square "owned by" --> "1" Player
         class Monopoly{
-            player
-            board
-            dice
+            
         }
         class Dice{
 
         }
         class Player{
-            player_piece
-            password
+           
         }
         class Board{
-            square
-            dice
-            player
+
         }
         class Square{
             next_square
-            type
         }
         class Jail{
 
