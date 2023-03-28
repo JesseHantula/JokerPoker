@@ -10,17 +10,17 @@
         main->>lippu_luukku: Kioski()
         lippu_luukku->>uusi_kortti: Matkakortti("Kalle")
         uusi_kortti->>kallen_kortti: uusi_kortti
-        lippu_luukku->>main: kallen_kortti
-        Main->>rautatietori: lataa_arvoa(kallen_kortti, 3)
+        lippu_luukku-->>main: kallen_kortti
+        main->>rautatietori: lataa_arvoa(kallen_kortti, 3)
         rautatietori->>kallen_kortti: kasvata_arvoa(3)
-        Main->>ratikka6: osta_lippu(kallen_kortti, 0)
+        main->>ratikka6: osta_lippu(kallen_kortti, 0)
         ratikka6->>kallen_kortti: arvo
         kallen_kortti-->>ratikka6: 3
         ratikka6->>kallen_kortti: vahenna_arvoa(1.5)
-        ratikka6-->>Main: True
-        Main->>bussi244: osta_lippu(kallen_kortti, 2)
+        ratikka6-->>main: True
+        main->>bussi244: osta_lippu(kallen_kortti, 2)
         bussi244->>kallen_kortti: arvo
         kallen_kortti-->>bussi244: 1.5
-        bussi244-->>Main: False
+        bussi244-->>main: False
         
 ```
