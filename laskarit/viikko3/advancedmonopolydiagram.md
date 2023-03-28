@@ -11,7 +11,7 @@ classDiagram
     Square --> Chance
     Square --> Jail
     Square --> Station
-    Square --> Starting_square
+    Square --> Starting_Square
     Chance --> Card
     Street_Square "has" --> "1-4" House
     Street_Square "has" --> "1" Hotel
