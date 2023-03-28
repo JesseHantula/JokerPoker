@@ -2,7 +2,7 @@
 classDiagram
     Monopoly --> "2" Dice
     Monopoly --> "1" Board
-    Board --> "2-8" Player
+    Monopoly --> "2-8" Player
     Board --> "40" Square
     Piece --> Square
     Player --> "1" Piece
