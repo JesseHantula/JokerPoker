@@ -9,10 +9,10 @@ classDiagram
     Player "has" --> Money
     Square --> Street_Square
     Square --> Chance
-    Square --> Jail
+    Square --> "1" Jail
     Square --> Station
-    Square --> Starting_Square
-    Chance --> Card
+    Square --> "1" Starting_Square
+    Chance --> "1" Card
     Street_Square "has" --> "1-4" House
     Street_Square "has" --> "1" Hotel
     Street_Square "owned by" --> "1" Player
