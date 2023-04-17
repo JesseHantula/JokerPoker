@@ -3,21 +3,22 @@ import random
 from enum import Enum
 
 class Suit(Enum):
-    clubs = 0
-    diamonds = 1
-    hearts = 2
-    spades = 3
+    CLUB = 0
+    DIAMOND = 1
+    HEART = 2
+    SPADE = 3
 
 class Card:
     def __init__(self, suit, value):
         self.suit = suit
         self.value = value
+        self.image = pygame.image.load("src/images/cards/" + self.suit.name + "-" + str(self.value) + ".svg")
 
 class Deck:
     def __init__(self):
         self.cards = []
         for suit in Suit:
-            for value in range(2, 15):
+            for value in range(1, 14):
                 self.cards.append(Card(suit, value))
                 
     def shuffle(self):
@@ -30,42 +31,57 @@ class Deck:
         return len(self.cards)
     
 class Player:
-    def __init__(self, name):
+    def __init__(self, name, money):
         self.name = name
         self.hand = []
-        self.money = 250
+        self.money = money
+        self.folded = False
         
     def draw(self, deck):
-        self.hand.append(deck.draw())
-        
-    def showHand(self):
-        for card in self.hand:
-            print(card.suit, card.value)
-            
-    def discard(self, index):
-        self.hand.pop(index)
-        
-    def discardAll(self):
+        for i in range(2):
+            self.hand.append(deck.draw())
+
+    def make_bet(self, amount):
+        self.money -= amount
+    
+    def fold(self):
         self.hand = []
 
-class Bot:
-    def __init__(self, name):
-        self.name = name
-        self.hand = []
-        self.money = 250
-        
-    def draw(self, deck):
-        self.hand.append(deck.draw())
-        
-    def showHand(self):
-        for card in self.hand:
-            print(card.suit, card.value)
+class Human(Player):
+    def handle_input():
+        pass
+
+class Bot(Player):
+    def decision():
+        pass
+
+class Round:
+    def __init__(self):
+        self.pot = 0
+        self.current_bet = 0
+        self.community_cards = []
+        self.players = []
+
+    def get_community_cards(self, deck):
+        for i in range(3):
+            self.community_cards.append(deck.draw())
+    
+    def add_community_card(self, deck):
+        self.community_cards.append(deck.draw())
             
-    def discard(self, index):
-        self.hand.pop(index)
-        
-    def discardAll(self):
-        self.hand = []
+    def update_pot(self, amount):
+        self.pot += amount
+
+    def update_bet(self, amount):
+        self.current_bet = amount
+
+    
+    
+
+
+
+
+
 
 
 
