@@ -1,9 +1,14 @@
+"""
+this module is the main module of the game
+"""
+import sys
 import pygame
-from models import *
-from engine import *
+from models import Deck
+from engine import Poker
 
-height = 720
-width = 1280
+
+HEIGHT = 720
+WIDTH = 1280
 
 #global colors that are used
 black = (0, 0, 0)
@@ -16,18 +21,20 @@ class Game:
     def __init__(self):
         self.deck = Deck()
         self.scale = 0.4
-        self.cardSize = (width * 0.1, height * 0.2)
+        self.card_size = (WIDTH * 0.1, HEIGHT * 0.2)
         self.cards = {}
-        self.cardBack = pygame.image.load("src/images/cards/BACK.png").convert_alpha()
-        self.cardBack = pygame.transform.scale(self.cardBack, (int(self.cardSize[0] * self.scale), int(self.cardSize[1] * self.scale)))
+        self.card_back = pygame.image.load("src/images/cards/BACK.png").convert_alpha()
+        scaled_width = int(self.scale * self.card_size[0])
+        scaled_height = int(self.scale * self.card_size[1])
+        self.card_back = pygame.transform.scale(self.card_back, (scaled_width, scaled_height))
         self.background = pygame.image.load("src/images/background.jpg")
-        self.background = pygame.transform.scale(self.background, (width, height))
+        self.background = pygame.transform.scale(self.background, (WIDTH, HEIGHT))
         window.blit(self.background, (0, 0))
 
         pygame.display.flip()
 
         for card in self.deck.cards:
-            self.cards[card] = pygame.transform.scale(card.image, (int(self.cardSize[0] * self.scale), int(self.cardSize[1] * self.scale)))
+            self.cards[card] = pygame.transform.scale(card.image, scaled_width, scaled_height)
 
         self.start_up_init()
 
@@ -36,12 +43,14 @@ class Game:
 
         self.font1 = pygame.font.SysFont("oldwest", 100)
         self.font2 = pygame.font.SysFont("comicsans", 50)
-        
-        self.startText = self.font1.render("Texas Hold 'Em", 1, black)
-        self.startTextLoc = (width/2 - self.startText.get_width()/2, height/2 - self.startText.get_height()/2 - 100)
-        self.startButton = self.font2.render("Start", 1, red)
-        self.startButtonLoc = (width/2 - self.startButton.get_width()/2, height/2 - self.startButton.get_height()/2)
-        self.button = pygame.Rect(self.startButtonLoc[0], self.startButtonLoc[1], self.startButton.get_width(), self.startButton.get_height())
+        self.start_text = self.font1.render("Texas Hold 'Em", 1, black)
+        self.start_text_loc = (WIDTH/2 - self.start_text.get_width()/2, \
+                             HEIGHT/2 - self.start_text.get_height()/2 - 100)
+        self.start_button = self.font2.render("Start", 1, red)
+        self.start_button_loc = (WIDTH/2 - self.start_button.get_width()/2, \
+                               HEIGHT/2 - self.start_button.get_height()/2)
+        self.button = pygame.Rect(self.start_button_loc[0], self.start_button_loc[1], \
+                                  self.start_button.get_width(), self.start_button.get_height())
 
         self.state = 0
 
@@ -49,14 +58,14 @@ class Game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                quit()
+                sys.exit()
 
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if self.button.collidepoint(event.pos):
-                    self.state = 1
+                    self.state += 1
 
-        window.blit(self.startText, self.startTextLoc)
-        window.blit(self.startButton, self.startButtonLoc)
+        window.blit(self.start_text, self.start_text_loc)
+        window.blit(self.start_button, self.start_button_loc)
 
         pygame.display.update()
 
@@ -65,15 +74,10 @@ class Game:
             self.start()
         elif self.state == 1:
             self.play()
-        elif self.state == 2:
-            self.results()
-        elif self.state == 3:
-            self.end()
-
 
 if __name__ == "__main__":
     pygame.init()
-    window = pygame.display.set_mode((width, height), 0, 32)
+    window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
     pygame.display.set_caption("POKER")
     Run = Game()
     while True:

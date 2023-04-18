@@ -1,6 +1,5 @@
 from enum import Enum
-import pygame
-from models import *
+from models import Deck, Player, Round
 
 class GameState(Enum):
     PLAYING = 1
@@ -13,71 +12,74 @@ class Poker:
         self.round = Round()
         self.deck.shuffle()
         self.player1 = Player("jesse", 500)
-        self.player2, self.player3, self.player4 = Bot("bot1", 500), Bot("bot2", 500), Bot("bot3", 500)
+        self.player2 = Player("james", 500)
+        self.player3 = Player("josh", 500)
+        self.player4 = Player("jake", 500)
+
         self.players = [self.player1, self.player2, self.player3, self.player4]
-        self.currentPlayer = self.player1
+        self.current_player = self.player1
         self.state = GameState.PLAYING
-        
-    def switchPlayer(self):
-        if self.currentPlayer == self.player1:
+
+    def switch_player(self):
+        if self.current_player == self.player1:
             if self.player4.folded and self.player2.folded and self.player3.folded:
                 self.state = GameState.ENDING
             elif self.player3.folded and self.player2.folded:
-                self.currentPlayer = self.player4
+                self.current_player = self.player4
             elif self.player2.folded:
-                self.currentPlayer = self.player3
+                self.current_player = self.player3
             else:
-                self.currentPlayer = self.player2
-        elif self.currentPlayer == self.player2:
+                self.current_player = self.player2
+        elif self.current_player == self.player2:
             if self.player1.folded and self.player4.folded and self.player3.folded:
                 self.state = GameState.ENDING
             elif self.player3.folded and self.player4.folded:
-                self.currentPlayer = self.player1
+                self.current_player = self.player1
             elif self.player3.folded:
-                self.currentPlayer = self.player4
+                self.current_player = self.player4
             else:
-                self.currentPlayer = self.player3
-        elif self.currentPlayer == self.player3:
+                self.current_player = self.player3
+        elif self.current_player == self.player3:
             if self.player4.folded and self.player1.folded and self.player2.folded:
                 self.state = GameState.ENDING
             elif self.player4.folded and self.player1.folded:
-                self.currentPlayer = self.player2
+                self.current_player = self.player2
             elif self.player4.folded:
-                self.currentPlayer = self.player1
+                self.current_player = self.player1
             else:
-                self.currentPlayer = self.player4
-        elif self.currentPlayer == self.player4:
+                self.current_player = self.player4
+        elif self.current_player == self.player4:
             if self.player1.folded and self.player2.folded and self.player3.folded:
                 self.state = GameState.ENDING
             elif self.player1.folded and self.player2.folded:
-                self.currentPlayer = self.player3
+                self.current_player = self.player3
             elif self.player1.folded:
-                self.currentPlayer = self.player2
+                self.current_player = self.player2
             else:
-                self.currentPlayer = self.player1
+                self.current_player = self.player1
 
     def play(self, key):
-        if key == None:
+        if key is None:
             return
-        
+
         if self.state == GameState.ENDING:
             return
-        
-        if key == self.currentPlayer.raiseKey:
-            self.currentPlayer.bet += 50
-            self.pot += 50
-            self.currentPlayer.money -= 50
-            self.switchPlayer()
+
+        if key == self.current_player.raise_key:
+            self.current_player.make_bet += 50
+            self.round.pot += 50
+            self.current_player.money -= 50
+            self.switch_player()
             return
-        
-        if key == self.currentPlayer.callKey:
-            self.currentPlayer.bet += 50
-            self.pot += 50
-            self.currentPlayer.money -= 50
-            self.switchPlayer()
+
+        if key == self.current_player.call_key:
+            self.current_player.make_bet += 50
+            self.round.pot += 50
+            self.current_player.money -= 50
+            self.switch_player()
             return
-        
-        if key == self.currentPlayer.foldKey:
-            self.currentPlayer.discardAll()
-            self.switchPlayer()
+
+        if key == self.current_player.fold_key:
+            self.current_player.discard_all()
+            self.switch_player()
             return
