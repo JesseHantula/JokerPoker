@@ -1,7 +1,7 @@
 ```mermaid
     Architecture
-        main -> models
-        main -> engine
-        engine -> models
+        main ->> models
+        main ->> engine
+        engine ->> models
 
 ```
