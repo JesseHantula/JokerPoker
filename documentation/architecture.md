@@ -1,5 +1,5 @@
 ```mermaid
-    Architecture
+    sequenceDiagram
         main ->> models
         main ->> engine
         engine ->> models
