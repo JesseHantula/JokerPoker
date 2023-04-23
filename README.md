@@ -3,3 +3,4 @@
 ### Project Documentation
 #### [Functional Specification](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/functionalspecification.md)
 #### [Worktime Accounting](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/worktimeaccounting.md)
+#### [Architecture](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/architecture.md)

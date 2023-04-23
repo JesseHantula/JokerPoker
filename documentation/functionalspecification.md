@@ -1,6 +1,6 @@
 # Functional specification
 ## General Overview
-##### This project contains a version of the card game known as Poker. This project follows the rules of the "Texas hold 'em" version of poker, which involves each player getting 2 cards, and 5 community cards are dealt in various turns. The player that has the best "hand" wins the round, and receives all the money that was put in by each player in the round. The "hand" rankings are as follows:
+##### This project contains a version of the card game known as "Joker Poker", or simply Poker. In this version of the game, there are 4 players, of which three are computer players. The player plays against the three computer players, and the goal is to have the best hand at the end of the round. The player receives 5 cards at the beginning, and can choose to replace any of the cards with new cards from the deck. The computer players are allowed to do the same. At the end of the replacement round, the cards are compared, with the hand rankings being as follows:
 ##### 1. Royal flush
 ##### 2. Straight flush
 ##### 3. Four of a kind
@@ -18,21 +18,15 @@
 
 ## Designed Functionalities
 #### Apply the following game structure:
-* Each player starts with two random cards from the deck, making sure that no player has the same card as another player.
-* Each player starts with $250. 
-* Each player takes turns putting down money for the round, each player must put in at least $10 (ante). The player can also drop out (fold) instead of placing down money. Also, each player must have put in the same amount of money (for example, if one player puts down $100, each player must match that amount or drop out). 
-* The dealer places down three cards, all of which can be seen by each player.
-* The players again take turns raising the amount of money, or calling (not raising the money).
-* The dealer places down a fourth card, and the process repeats.
-* The dealer places down a fifth and final card, and the players again either raise or call.
-* Once the players are done raising money, they show their cards and reveal the winner.
-* The winner of the round receives all the money put in from the players, and the next round is played.
-* The game continues until either all players except for one run out of money, or if the player quits.
-* A winner screen is presented, with an option to play again or quit.
+* Each player starts with five random cards from the deck, making sure no two players have the same card.
+* The player can choose to replace any of the cards with new cards from the deck.
+* The bots can choose to replace any of the cards with new cards from the deck.
+* The cards are compared, and the player with the best hand wins the round.
+* The player can choose to play another round, or quit the game.
+* Scores are kept track of to see which player has the most wins
 
 ## Additional Functionality Ideas
 * Create a "party mode", where multiple players can take turns playing on the same device.
 * Change the amount of bots the user can play against.
-* Make multiple options for starting amount of cash, and ante.
 * Create multiple difficulties for the bots, such that the hardest difficulty bots will make smarter decisions, whereas the easier difficulty bots will often make mistakes.
 * Create a leaderboard system such that players can keep track of their wins (this would also require a login system in most cases). 
