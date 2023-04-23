@@ -1,12 +1,13 @@
 import unittest
-from models import *
+from entities.models import Deck, Card, Suit
+
 
 class TestCard(unittest.TestCase):
     def test_card(self):
         card = Card(Suit.SPADE, 1)
         self.assertEqual(card.suit, Suit.SPADE)
         self.assertEqual(card.value, 1)
-        
+
 
 class TestDeck(unittest.TestCase):
     def test_deck_length(self):
@@ -24,23 +25,10 @@ class TestDeck(unittest.TestCase):
         card = deck.draw()
         self.assertEqual(deck.length(), 51)
 
-class TestPlayer(unittest.TestCase):
-    def test_player(self):
-        player = Player("test", 100)
-        self.assertEqual(player.name, "test")
-        self.assertEqual(player.money, 100)
-        self.assertEqual(player.folded, False)
-
-    def test_player_draw(self):
+    def test_deck_deal(self):
         deck = Deck()
         deck.shuffle()
-        player = Player("test", 100)
-        player.draw(deck)
-        self.assertEqual(len(player.hand), 2)
-        self.assertEqual(deck.length(), 50)
-
-
-
-
-
-
+        hand = deck.deal()
+        self.assertEqual(deck.length(), 47)
+        self.assertEqual(len(hand), 5)
+        
