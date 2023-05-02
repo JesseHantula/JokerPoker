@@ -7,5 +7,6 @@ To run the game, clone the repository and go to the poker directory. From there,
 #### [Worktime Accounting](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/worktimeaccounting.md)
 #### [Architecture](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/architecture.md)
 #### [Changelog](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/changelog.md)
+#### [User Manual](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/usermanual.md)
 ### Project Releases
 #### [Week 5](https://github.com/JesseHantula/ot-harjoitustyo/releases/tag/Week5)
