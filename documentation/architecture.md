@@ -4,7 +4,7 @@
 ![Diagram](./pictures/architecture.png)
 
 ## Application logic
-##### The following diagram shows the flow of the application logic:
+The following diagram shows the flow of the application logic:
 ```mermaid
     sequenceDiagram
         participant User
@@ -24,11 +24,9 @@
         User->>+Game: Select cards to hold
         Game->>+Poker: Set held cards and deal new cards
         Poker->>+Game: Show the new hand
-        Game-->>-User: Show the new hand of cards
         Game->>+Poker: Determine winner of the game
         Poker-->>-Game: Display winner of the game
-        Game->>+Poker: Reset game for new play
-        Poker-->>-Game: Game reset for new play
+        Game-->>-User: Show the new hand of cards and results of the game
         User->>+Game: Click 'Start' button to play again
         deactivate Poker
         deactivate Game
