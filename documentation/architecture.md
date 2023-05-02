@@ -7,8 +7,6 @@
 The following diagram shows the flow of the application logic:
 ```mermaid
     sequenceDiagram
-        participant User
-        participant Game
         User->>Game: Initialize Game
         activate Game
         Game-->>User: Game window displayed
@@ -28,6 +26,4 @@ The following diagram shows the flow of the application logic:
         Poker-->>Game: Display winner of the game
         Game-->>User: Show the new hand of cards and results of the game
         User->>Game: Click 'Start' button to play again
-        deactivate Poker
-        deactivate Game
 ```
