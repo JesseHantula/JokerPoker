@@ -20,6 +20,7 @@ blue = (0, 0, 255)
 
 class Game:
     def __init__(self):
+        pygame.init()
         self.window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
         self.deck = Deck()
         self.scale = 0.75
@@ -196,11 +197,20 @@ class Game:
                     if mouse_rect.colliderect(pygame.Rect(self.new_game_button_loc[0], \
                                                           self.new_game_button_loc[1], self.new_game_button.get_width(), self.new_game_button.get_height())):
                         self.poker.reset()
-                        self.poker.deal()
-                        self.init()
                         self.state = 1
 
         self.window.blit(self.background, (0, 0))
+        
+        self.player_hand_value = self.poker.check_hand(self.poker.player_hand)
+        self.bot1_hand_value = self.poker.check_hand(self.poker.bot1_hand)
+        self.bot2_hand_value = self.poker.check_hand(self.poker.bot2_hand)
+        self.bot3_hand_value = self.poker.check_hand(self.poker.bot3_hand)
+
+        #test to see player score by printing it on the screen
+        self.player_hand_text = self.font1.render(str(self.player_hand_value), 1, white)
+        self.player_hand_text_loc = (100, 100)
+        self.window.blit(self.player_hand_text, self.player_hand_text_loc)
+
 
         # display cards in our hand
         for i in range(5):
@@ -218,6 +228,7 @@ class Game:
         self.window.blit(self.bot1_text, self.bot1_text_loc)
         self.window.blit(self.bot2_text, self.bot2_text_loc)
         self.window.blit(self.bot3_text, self.bot3_text_loc)
+
 
         # display play again button
         self.window.blit(self.new_game_button, self.new_game_button_loc)

@@ -1,6 +1,6 @@
 import unittest
 from entities.models import Deck, Card, Suit
-
+from entities.engine import Poker
 
 class TestCard(unittest.TestCase):
     def test_card(self):
@@ -31,4 +31,13 @@ class TestDeck(unittest.TestCase):
         hand = deck.deal()
         self.assertEqual(deck.length(), 47)
         self.assertEqual(len(hand), 5)
+        
+class TestPoker(unittest.TestCase):
+    def test_poker(self):
+        poker = Poker([0,0,0,0])
+        self.assertEqual(len(poker.player_hand), 5)
+        self.assertEqual(len(poker.bot1_hand), 5)
+        self.assertEqual(len(poker.bot2_hand), 5)
+        self.assertEqual(len(poker.bot3_hand), 5)
+        
         
