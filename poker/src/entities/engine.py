@@ -62,8 +62,9 @@ class Poker:
         Args: hand (list): list of cards in hand
         Returns: True if hand is a royal flush, False otherwise
         """
-        if self.check_flush(hand) and self.check_straight(hand) and hand[0][1] == 1:
-            return True
+        if self.check_flush(hand) and hand[0][1] == 1:
+            if hand[1][1] == 10 and hand[2][1] == 11 and hand[3][1] == 12 and hand[4][1] == 13:
+                return True
         return False
 
     def check_straight_flush(self, hand):

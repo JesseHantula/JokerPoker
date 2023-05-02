@@ -19,7 +19,13 @@ blue = (0, 0, 255)
 
 
 class Game:
+    """
+    Class that represents the game. Will be split up into multiple files in the future.
+    """
     def __init__(self):
+        """
+        Constructor class that initializes the game. Initializes the window, the deck of cards, and the card images.
+        """
         pygame.init()
         self.window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
         self.deck = Deck()
@@ -46,6 +52,10 @@ class Game:
         self.start_up_init()
 
     def start_up_init(self):
+        """
+        Initializes the start up screen. This is the screen that is shown when the game is first started.
+        Gets locations and images for the start up screen.
+        """
         self.scoreboard = [0, 0, 0, 0]
         self.poker = Poker(self.scoreboard)
 
@@ -63,6 +73,9 @@ class Game:
         self.state = 0
 
     def start(self):
+        """
+        Starts the game. Updates the screen based off start_up_init().
+        """
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -79,7 +92,10 @@ class Game:
         pygame.display.update()
 
     def play_init(self):
-        # set location for cards in our hand (5 cards)
+        """
+        Initializes the play screen. This is the screen that is shown when the game is being played.
+        Gets locations and images for the play screen.
+        """
         self.player_card_loc = []
         for i in range(5):
             self.player_card_loc.append(
@@ -102,7 +118,6 @@ class Game:
             self.bot3_card_loc.append(
                 (WIDTH/3 - self.card_size[0]/2 + i * 100, HEIGHT/5 - self.card_size[1]/2 + 500))
 
-        # set location for text above each player's hand
         self.player_text = self.font2.render("You", 1, black)
         self.player_text_loc = (
             WIDTH/3 - self.player_text.get_width()/2 + 175, HEIGHT/5 - self.card_size[1]/2 - 75)
@@ -116,19 +131,20 @@ class Game:
         self.bot3_text_loc = (
             WIDTH/3 - self.card_size[0]/2 + 175, HEIGHT/5 - self.card_size[1]/2 + 425)
 
-        # set location for text below player's hand
         self.player_hand_text = self.font3.render(
             "Select cards to replace: ", 1, black)
         self.player_hand_text_loc = (
             WIDTH/3 - self.player_hand_text.get_width()/2 + 185, \
             HEIGHT/5 - self.card_size[1]/2 + 110)
 
-        # make replace button
         self.replace_button = self.font2.render("Replace", 1, red)
         self.replace_button_loc = (
             WIDTH/3 - self.replace_button.get_width()/2 + 550, HEIGHT/5 - self.card_size[1]/2 + 10)
 
     def play(self):
+        """
+        Updates the screen based off play_init().
+        """
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -151,7 +167,6 @@ class Game:
                                 self.player_card_loc[i] = (
                                     self.player_card_loc[i][0], self.player_card_loc[i][1] + 20)
 
-                    # check if player clicked on the replace button, if so, replace the cards
                     if mouse_rect.colliderect(pygame.Rect(self.replace_button_loc[0], \
                                                           self.replace_button_loc[1], self.replace_button.get_width(), self.replace_button.get_height())):
                         self.poker.replace_cards(self.poker.cards_to_replace)
@@ -161,7 +176,6 @@ class Game:
 
         self.window.blit(self.background, (0, 0))
 
-        # display cards in our hand
         for i in range(5):
             self.window.blit(
                 self.cards[str(self.poker.player_hand[i])], self.player_card_loc[i])
@@ -169,23 +183,22 @@ class Game:
             self.window.blit(self.card_back, self.bot2_card_loc[i])
             self.window.blit(self.card_back, self.bot3_card_loc[i])
 
-        # display text above each player's hand
         self.window.blit(self.player_text, self.player_text_loc)
         self.window.blit(self.bot1_text, self.bot1_text_loc)
         self.window.blit(self.bot2_text, self.bot2_text_loc)
         self.window.blit(self.bot3_text, self.bot3_text_loc)
 
-        # display text below player's hand
         self.window.blit(self.player_hand_text, self.player_hand_text_loc)
 
-        # display replace button
         self.window.blit(self.replace_button, self.replace_button_loc)
 
-        # call function that displays scores
         self.scores()
         pygame.display.update()
 
     def end(self):
+        """
+        Updates the screen based off end_init().
+        """
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -206,13 +219,10 @@ class Game:
         self.bot2_hand_value = self.poker.check_hand(self.poker.bot2_hand)
         self.bot3_hand_value = self.poker.check_hand(self.poker.bot3_hand)
 
-        #test to see player score by printing it on the screen
         self.player_hand_text = self.font1.render(str(self.player_hand_value), 1, white)
         self.player_hand_text_loc = (100, 100)
         self.window.blit(self.player_hand_text, self.player_hand_text_loc)
 
-
-        # display cards in our hand
         for i in range(5):
             self.window.blit(
                 self.cards[str(self.poker.player_hand[i])], self.player_card_loc[i])
@@ -223,22 +233,21 @@ class Game:
             self.window.blit(
                 self.cards[str(self.poker.bot3_hand[i])], self.bot3_card_loc[i])
 
-        # display text above each player's hand
         self.window.blit(self.player_text, self.player_text_loc)
         self.window.blit(self.bot1_text, self.bot1_text_loc)
         self.window.blit(self.bot2_text, self.bot2_text_loc)
         self.window.blit(self.bot3_text, self.bot3_text_loc)
 
-
-        # display play again button
         self.window.blit(self.new_game_button, self.new_game_button_loc)
 
-        # call function that displays scores
         self.scores()
         pygame.display.update()
 
     def end_init(self):
-        # set location for text above each player's hand
+        """
+        Initializes the end screen. This is the screen that shows the final hands of all players, and the winner.
+        Gets locations of all cards, and the text for each player.
+        """
         self.player_text = self.font2.render("You", 1, black)
         self.player_text_loc = (
             WIDTH/3 - self.player_text.get_width()/2 + 175, HEIGHT/5 - self.card_size[1]/2 - 75)
@@ -258,6 +267,9 @@ class Game:
             WIDTH/3 - self.replace_button.get_width()/2 + 550, HEIGHT/5 - self.card_size[1]/2 + 10)
 
     def scores(self):
+        """
+        Displays the scores of each player.
+        """
         # display scores
         self.player_score = self.font3.render(
             f"Your score: {self.scoreboard[0]}", 1, black)
@@ -282,6 +294,9 @@ class Game:
         self.window.blit(self.bot3_score, self.bot3_score_loc)
 
     def main(self):
+        """
+        Main loop of the game. Runs the game based on the state of the game.
+        """
         if self.state == 0:
             self.start()
         elif self.state == 1:
