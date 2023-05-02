@@ -10,3 +10,6 @@
 ## Week 5
 * Created UI for the game screen, and started implementing results screen
 * Added functionality to the game screen that includes choosing cards to hold, and drawing new cards
+## Week 6
+* Continued working on the results screen
+* Created function that calculates the score of the player's hand

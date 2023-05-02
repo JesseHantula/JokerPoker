@@ -65,7 +65,7 @@ class Poker:
         if self.check_flush(hand) and self.check_straight(hand) and hand[0][1] == 1:
             return True
         return False
-    
+
     def check_straight_flush(self, hand):
         """Check if hand is a straight flush
         Args: hand (list): list of cards in hand
@@ -74,7 +74,7 @@ class Poker:
         if self.check_flush(hand) and self.check_straight(hand):
             return True
         return False
-    
+
     def check_four_of_a_kind(self, hand):
         """Check if hand is a four of a kind
         Args: hand (list): list of cards in hand
@@ -84,7 +84,7 @@ class Poker:
             if hand[i][1] == hand[i+1][1] == hand[i+2][1] == hand[i+3][1]:
                 return True
         return False
-    
+
     def check_full_house(self, hand):
         """Check if hand is a full house
         Args: hand (list): list of cards in hand
@@ -92,10 +92,10 @@ class Poker:
         """
         if hand[0][1] == hand[1][1] == hand[2][1] and hand[3][1] == hand[4][1]:
             return True
-        elif hand[0][1] == hand[1][1] and hand[2][1] == hand[3][1] == hand[4][1]:
+        if hand[0][1] == hand[1][1] and hand[2][1] == hand[3][1] == hand[4][1]:
             return True
         return False
-    
+
     def check_flush(self, hand):
         """Check if hand is a flush
         Args: hand (list): list of cards in hand
@@ -105,7 +105,7 @@ class Poker:
             if hand[i][0] != hand[i+1][0]:
                 return False
         return True
-    
+
     def check_straight(self, hand):
         """Check if hand is a straight
         Args: hand (list): list of cards in hand
@@ -115,7 +115,7 @@ class Poker:
             if hand[i][1] + 1 != hand[i+1][1]:
                 return False
         return True
-    
+
     def check_three_of_a_kind(self, hand):
         """Check if hand is a three of a kind
         Args: hand (list): list of cards in hand
@@ -125,7 +125,7 @@ class Poker:
             if hand[i][1] == hand[i+1][1] == hand[i+2][1]:
                 return True
         return False
-    
+
     def check_two_pair(self, hand):
         """Check if hand is a two pair
         Args: hand (list): list of cards in hand
@@ -133,12 +133,12 @@ class Poker:
         """
         if hand[0][1] == hand[1][1] and hand[2][1] == hand[3][1]:
             return True
-        elif hand[0][1] == hand[1][1] and hand[3][1] == hand[4][1]:
+        if hand[0][1] == hand[1][1] and hand[3][1] == hand[4][1]:
             return True
-        elif hand[1][1] == hand[2][1] and hand[3][1] == hand[4][1]:
+        if hand[1][1] == hand[2][1] and hand[3][1] == hand[4][1]:
             return True
         return False
-    
+
     def check_pair(self, hand):
         """Check if hand is a pair
         Args: hand (list): list of cards in hand
@@ -148,4 +148,4 @@ class Poker:
             if hand[i][1] == hand[i+1][1]:
                 return True
         return False
-    
+
