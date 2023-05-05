@@ -10,3 +10,4 @@ To run the game, clone the repository and go to the poker directory. From there,
 #### [User Manual](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/usermanual.md)
 ### Project Releases
 #### [Week 5](https://github.com/JesseHantula/ot-harjoitustyo/releases/tag/Week5)
+#### [Week 6](https://github.com/JesseHantula/ot-harjoitustyo/releases/tag/Week6)
