@@ -127,9 +127,6 @@ class Game:
                         self.state = 1
                         self.running = False
 
-            
-        
-    
     def main(self):
         """
         Main loop of the game. Runs the game based on the state of the game.
