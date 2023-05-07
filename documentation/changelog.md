@@ -13,3 +13,7 @@
 ## Week 6
 * Continued working on the results screen
 * Created function that calculates the score of the player's hand
+## Week 7
+* Added functionality to the results screen that displays the winner of the game
+* Created function that determines the winner of the game, taking high card into account
+* Added functionality that allows the user to play again, while scores are kept track of

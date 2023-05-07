@@ -7,3 +7,5 @@
 | 18.4    | 2    | Updating code such that Pylint tests are passed |
 | 23.4    | 4    | Changed the way the game is played, added a few tests, set up game interface |
 | 2.5     | 4    | Added functionality to the game interface, added a few tests, implemented Docstring documentation |
+| 5.5     | 3    | Restructured the code to make it more organized |
+| 7.5     | 4    | Finished the game interface |
