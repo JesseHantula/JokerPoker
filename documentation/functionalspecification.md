@@ -20,7 +20,6 @@
 #### Apply the following game structure:
 * Each player starts with five random cards from the deck, making sure no two players have the same card.
 * The player can choose to replace any of the cards with new cards from the deck.
-* The bots can choose to replace any of the cards with new cards from the deck.
 * The cards are compared, and the player with the best hand wins the round.
 * The player can choose to play another round, or quit the game.
 * Scores are kept track of to see which player has the most wins
