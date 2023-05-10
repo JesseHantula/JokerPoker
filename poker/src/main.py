@@ -1,8 +1,6 @@
 import pygame
 from ui.game_ui import Game
-
-WIDTH = 1280
-HEIGHT = 720
+from constants import WIDTH, HEIGHT
 
 if __name__ == "__main__":
     pygame.init()

@@ -1,12 +1,22 @@
 import pygame
 import constants
-from ui.game_screen import GameScreen
 
 class EndScreen:
+    """Class that represents the end screen of the game.
+    """
     def __init__(self):
         pass
 
     def draw_screen(self, window, new_round_button, poker, card_size, cards, winner):
+        """Draws the end screen on the screen.
+        Args:
+            window (pygame.Surface): the window to draw the end screen on
+            new_round_button (Button): the button to start a new round
+            poker (Poker): the poker game
+            card_size (tuple): the size of the cards
+            cards (dict): the dictionary of the cards
+            winner (tuple): the winner of the game
+        """
         window.blit(pygame.font.SysFont(constants.FONT2[0], constants.FONT2[1]).render \
                     ("You", 1, constants.BLACK), (constants.WIDTH/3 + 150, \
                                                    constants.HEIGHT/5 - card_size[1]/2 - 50))
@@ -39,8 +49,11 @@ class EndScreen:
         
         new_round_button.draw(window)
         
-
     def set_locs(self, card_size):
+        """Sets the locations of the cards on the screen.
+        Args:
+            card_size (tuple): the size of the cards
+        """
         self.player_card_loc = []
         for i in range(5):
             self.player_card_loc.append(
@@ -64,6 +77,11 @@ class EndScreen:
                 (constants.WIDTH/3 - card_size[0]/2 + i * 100, constants.HEIGHT/5 - card_size[1]/2 + 500))
             
     def draw_scores(self, window, scoreboard):
+        """Draws the scores on the screen.
+        Args:
+            window (pygame.Surface): the window to draw the scores on
+            scoreboard (list): the list of the scores
+        """
         window.blit(pygame.font.SysFont(constants.FONT3[0], constants.FONT3[1]).render \
                          (f"Your score: {scoreboard[0]}", 1, constants.BLACK), \
                          (20, 20))

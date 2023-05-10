@@ -16,14 +16,16 @@ class Suit(Enum):
 class Card:
     """
     Class that represents a card in a deck of cards.
-    Attributes: suit (Suit): suit of the card
-                value (int): value of the card
+    Attributes: 
+        suit (Suit): suit of the card
+        value (int): value of the card
     """
     def __init__(self, suit, value):
         """
         Constructor class that initializes the card. It also loads the image of the card.
-        Args: suit (Suit): suit of the card
-              value (int): value of the card
+        Args: 
+            suit (Suit): suit of the card
+            value (int): value of the card
         """
         self.suit = suit
         self.value = value
@@ -32,9 +34,19 @@ class Card:
 
     def __str__(self):
         """
-        Returns a string representation of the card.
+        Returns:
+            a string representation of the card.
         """
         return f"{self.value} of {self.suit.name}"
+ 
+    def __eq__(self, other):
+        """
+        Args:
+            other (Card): other card to compare to
+        Returns:
+            True if the cards are equal, False otherwise.
+        """
+        return self.value == other.value and self.suit == other.suit
 
 class Deck:
     """
@@ -42,7 +54,8 @@ class Deck:
     """
     def __init__(self):
         """
-        Constructor class that initializes the deck of cards. Does this by adding cards with values 1-13 for each suit.
+        Constructor class that initializes the deck of cards. 
+        Does this by adding cards with values 1-13 for each suit.
         """
         self.cards = []
         for suit in Suit:
@@ -57,19 +70,24 @@ class Deck:
 
     def draw(self):
         """
-        Draws a card from the deck. Returns the card.
+        Draws a card from the deck. 
+        Returns:
+            the card that has been drawn.
         """
         return self.cards.pop()
 
     def length(self):
         """
-        Returns the length of the deck.
+        Returns:
+            the length of the deck.
         """
         return len(self.cards)
 
     def deal(self):
         """
-        Deals a hand of 5 cards from the deck. Returns the hand.
+        Deals a hand of 5 cards from the deck. 
+        Returns:
+            the hand that has been dealt.
         """
         hand = []
         for _ in range(5):

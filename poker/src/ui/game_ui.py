@@ -1,5 +1,5 @@
 """
-this module is the main module of the game
+This module is the main UI module of the game
 """
 import sys
 import pygame
@@ -14,7 +14,7 @@ import constants
 
 class Game:
     """
-    Class that represents the game. Will be split up into multiple files in the future.
+    Class that represents the game UI.
     """
     def __init__(self):
         """
@@ -26,8 +26,7 @@ class Game:
         self.scale = 0.75
         self.card_size = (constants.WIDTH * 0.1, constants.HEIGHT * 0.2)
         self.background = pygame.image.load("src/images/background.jpg")
-        self.background = pygame.transform.scale(
-            self.background, (constants.WIDTH, constants.HEIGHT))
+        self.background = pygame.transform.scale(self.background, (constants.WIDTH, constants.HEIGHT))
         self.window.blit(self.background, (0, 0))
         self.cards = {}
         self.card_back = pygame.image.load("src/images/cards/BACK.png").convert_alpha()
@@ -60,13 +59,14 @@ class Game:
 
     def play(self):
         """
-        Function that runs the game.
+        Function that runs the main game screen.
         """   
         self.draw_game = GameScreen()
         self.replace_button = Button(900, 80, 200, 100, constants.RED, "Replace", constants.BLACK, constants.FONT1[0], 50, True)
         self.draw_game.set_locs(self.card_size)
         card_locs = self.draw_game.get_locs()
         self.running = True
+        #sets up a loop to make updating the screen easier
         while self.running:
             self.window.blit(self.background, (0, 0))
             self.draw_game.draw_screen(self.window, self.card_size, self.card_back, self.cards, self.poker, self.replace_button)
@@ -99,12 +99,11 @@ class Game:
                                     self.poker.cards_to_replace = []
                                 self.state = 2
                                 self.running = False
-                                    
-                        
+                                                      
             
     def end(self):
         """
-        Function that deals with the end of the game.
+        Function that runs the end screen of the game.
         """
         self.new_round_button = Button(900, 80, 200, 100, constants.RED, "New Round", (0, 0, 0), "oldwest", 50, True)
         self.winner_nums = self.poker.get_winner()
@@ -112,6 +111,7 @@ class Game:
         self.winner = self.poker.convert(self.winner_nums)
         self.end_screen = EndScreen()
         self.running = True
+        #sets up a loop to make updating the screen easier
         while self.running:
             self.window.blit(self.background, (0, 0))
             self.end_screen.draw_screen(self.window, self.new_round_button, \

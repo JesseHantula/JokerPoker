@@ -1,3 +1,4 @@
+"""Constants for the game."""
 HEIGHT = 720
 WIDTH = 1280
 BLACK = (0, 0, 0)
