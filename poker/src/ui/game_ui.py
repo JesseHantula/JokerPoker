@@ -51,12 +51,10 @@ class Game:
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if self.start_button.use():
                     self.state = 1
                     
-
     def play(self):
         """
         Function that runs the main game screen.

@@ -38,7 +38,7 @@ class Card:
             a string representation of the card.
         """
         return f"{self.value} of {self.suit.name}"
- 
+
     def __eq__(self, other):
         """
         Args:

@@ -48,7 +48,7 @@ class Poker:
             ret.append("Bot 1")
         elif winner[0] == 2:
             ret.append("Bot 2")
-        elif winner[0] == 3:
+        else:
             ret.append("Bot 3")
 
         if int(winner[1]) == 0:
@@ -69,7 +69,7 @@ class Poker:
             ret.append("Four of a Kind")
         elif int(winner[1]) == 8:
             ret.append("Straight Flush")
-        elif int(winner[1]) == 9:
+        else:
             ret.append("Royal Flush")
         return ret
 
