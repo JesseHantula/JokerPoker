@@ -1,20 +1,14 @@
 # User manual
 ## Introduction
 This is the user manual for the project. It contains information about how to use the project and how to set it up.
-## Installation
-### Prerequisites
-The project requires Python to run. The project also requires the following packages:
-* Pygame
-* Pytest
-* Pylint
 
-### Installing the project
+## Installing the project
 The project can be installed by cloning the repository and installing the required packages. This can be done by running the following commands in the terminal:
 ```bash
 git clone
 cd poker
 ```
-### Running the project
+## Running the project
 The project can be run by using Poetry and running the following command in the terminal:
 ```bash
 poetry run invoke start
