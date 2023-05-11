@@ -14,4 +14,5 @@ A single test was done to check that the constants were correct.
 ## Test results
 The test results for the project can be viewed below:
 ![Test coverage](./pictures/CoverageReport.png)
+
 In total, the coverage is 96%. However, this includes the main.py file that is used to start the game, which is the reason the coverage is not at 100%. All branches of the models.py and engine.py files were tested, and all tests passed. Additionally, the test for the constants.py file passed as well.
