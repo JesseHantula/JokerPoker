@@ -1,4 +1,5 @@
 # Joker Poker
+This project contains a simple version of the game Joker Poker. All information needed about the project can be found below.
 ## Project Documentation
 #### [Functional Specification](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/functionalspecification.md)
 #### [Worktime Accounting](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/worktimeaccounting.md)
