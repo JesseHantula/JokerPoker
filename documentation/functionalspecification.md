@@ -11,6 +11,7 @@ This project contains a version of the card game known as "Joker Poker", or simp
 8. Two pairs
 9. Pair
 10. High card
+
 In the case of a tie (ie. two players have a three of a kind), the player with the higher card wins (ie. a player with three 10's beats a player with three 5's).
 
 ## Players
