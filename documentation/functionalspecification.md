@@ -1,16 +1,16 @@
 # Functional specification
 ## General Overview
 This project contains a version of the card game known as "Joker Poker", or simply Poker. In this version of the game, there are 4 players, of which three are computer players. The player plays against the three computer players, and the goal is to have the best hand at the end of the round. The player receives 5 cards at the beginning, and can choose to replace any of the cards with new cards from the deck. At the end of the replacement round, the cards are compared, with the hand rankings being as follows:
-##### 1. Royal flush
-##### 2. Straight flush
-##### 3. Four of a kind
-##### 4. Full house
-##### 5. Flush
-##### 6. Straight
-##### 7. Three of a kind
-##### 8. Two pairs
-##### 9. Pair
-##### 10. High card
+1. Royal flush
+2. Straight flush
+3. Four of a kind
+4. Full house
+5. Flush
+6. Straight
+7. Three of a kind
+8. Two pairs
+9. Pair
+10. High card
 In the case of a tie (ie. two players have a three of a kind), the player with the higher card wins (ie. a player with three 10's beats a player with three 5's).
 
 ## Players
