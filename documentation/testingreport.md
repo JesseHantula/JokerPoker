@@ -1,7 +1,7 @@
 # Testing Report
 The project has been tested for errors using Unittest.
 ## Testing Summary
-There are 2 main files in this project that needed to be tested: the models.py file and the engine.py file. The models.py file contains the entities for a card and a deck of cards, while the engine.py file contained the entity for a poker game. 
+There are 2 main files in this project that needed to be tested: the models.py file and the engine.py file. The models.py file contains the entities for a card and a deck of cards, while the engine.py file contains the entity for a poker game. 
 ### Card
 The tests for the card entity made sure that the card was equal to its string, and tested the __eq__ method of the card class. 
 ### Deck
