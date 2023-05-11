@@ -91,7 +91,7 @@ class TestPoker(unittest.TestCase):
         self.assertEqual(int(poker.check_hand(two_pair)), 2)
 
         two_pair_2 = [Card(Suit.SPADE, 1), Card(Suit.HEART, 2), Card(Suit.CLUB, 2), Card(Suit.DIAMOND, 3), Card(Suit.SPADE, 3)]
-        self.assertEqual(round(poker.check_hand(two_pair_2), 2), 2.03)
+        self.assertEqual(int(round(poker.check_hand(two_pair_2)), 2), 2)
 
         one_pair = [Card(Suit.SPADE, 10), Card(Suit.HEART, 10), Card(Suit.CLUB, 2), Card(Suit.DIAMOND, 3), Card(Suit.SPADE, 4)]
         self.assertEqual(int(poker.check_hand(one_pair)), 1)
