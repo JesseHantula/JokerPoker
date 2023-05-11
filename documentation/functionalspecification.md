@@ -22,11 +22,11 @@ Apply the following game structure:
 * The player can choose to replace any of the cards with new cards from the deck.
 * The cards are compared, and the player with the best hand wins the round.
 * The player can choose to play another round.
-* Scores are kept track of to see which player has the most wins
+* Scores are kept track of to see which player has the most wins.
 
 ## Additional Functionality Ideas
 With more time, the following functionalities could be added:
 * Create a "party mode", where multiple players can take turns playing on the same device.
 * Change the amount of bots the user can play against.
-* Create "artificial intelligence" for the bots, such that they can make decisions based on the cards they have.
+* Create "artificial intelligence" for the bots, such that they can make decisions based on the cards they have to improve their hand.
 * Create a leaderboard system such that players can keep track of their wins (this would also require a login system in most cases). 

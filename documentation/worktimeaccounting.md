@@ -9,4 +9,6 @@
 | 2.5     | 4    | Added functionality to the game interface, added a few tests, implemented Docstring documentation |
 | 5.5     | 3    | Restructured the code to make it more organized |
 | 7.5     | 4    | Finished the game interface |
-| Total   | 24   |  |
+| 10.5    | 2    | Testing and Pylint updates |
+| 11.5    | 2    | Documentation |
+| Total   | 28   |  |

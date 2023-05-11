@@ -41,11 +41,11 @@ class EndScreen:
         if winner[0] == "You":
             window.blit(pygame.font.SysFont(constants.FONT2[0], constants.FONT2[1]).render \
                     (winner[0] + " win with " + winner[1] + "!", 1, constants.WHITE), \
-                    (constants.WIDTH/2 - 200, constants.HEIGHT/2 - 150))
+                    (constants.WIDTH/2 - 225, constants.HEIGHT/2 - 150))
         else:
             window.blit(pygame.font.SysFont(constants.FONT2[0], constants.FONT2[1]).render \
                         (winner[0] + " wins with " + winner[1] + "!", 1, constants.WHITE), \
-                        (constants.WIDTH/2 - 200, constants.HEIGHT/2 - 150))
+                        (constants.WIDTH/2 - 225, constants.HEIGHT/2 - 150))
         
         new_round_button.draw(window)
         

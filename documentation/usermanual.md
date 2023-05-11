@@ -37,6 +37,6 @@ The user can select cards to hold by clicking on them, and can deselect cards by
 
 ### Ending the game
 The ending screen looks like this:
-##### No end screen yet
-The user will now see the results of the game, and can choose to play again by clicking the 'New Round' button. On the top left part of the screen, the user can view the scores of each player. 
+![Ending screen](./pictures/EndScreen.png)
+The user will now see the results of the game, and can choose to play again by clicking the 'New Round' button. On the top left part of the screen, the user can view the scores of each player. In this round, Bot 1 won with a three of a kind, which is shown on the screen.
 
