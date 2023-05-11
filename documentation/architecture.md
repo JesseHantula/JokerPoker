@@ -8,7 +8,7 @@ The structure of the project follows the architecture shown below:
 There are 3 main windows in the application:
 * Starting screen
 * Game screen
-* Results screen
+* Ending screen
 
 From the start screen, the user can start the game and will be brought to the game screen. From the game screen, the user can play the game and will be brought to the results screen. From the results screen, the user can start the game again and will be brought to the game screen.
 
