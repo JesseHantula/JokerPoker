@@ -13,22 +13,22 @@ There are 3 main windows in the application:
 From the start screen, the user can start the game and will be brought to the game screen. From the game screen, the user can play the game and will be brought to the results screen. From the results screen, the user can start the game again and will be brought to the game screen.
 
 ## Application Logic
-The only logic that needs to be used in this project is to calculate a winner. This is done by comparing the hands of each player, and determining which hand is the best. The hands are compared by first checking the hand ranking, and then checking the high card. If the hand ranking is the same, then the high card is used to determine the winner. 
+The main logical aspect of this project is used to calculate a winner. This is done by comparing the hands of each player, and determining which hand is the best. The hands are compared by first checking the hand ranking, and then checking the high card. If the hand ranking is the same, then the high card is used to determine the winner. 
 ```mermaid
 classDiagram
     Round --> Winner
     class Round{
-
+        players
     }
     class Winner{
         hand ranking
         high card
-        name
+        player
     }
 ```
 ## Main Functions
 ### Starting a game
-The following diagram shows the flow of the application logic:
+The following diagram shows the flow of the game logic:
 ```mermaid
     sequenceDiagram
         User->>Game: Initialize Game
