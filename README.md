@@ -10,6 +10,7 @@ This project contains a simple version of the game Joker Poker. All information 
 ## Project Releases
 #### [Week 5](https://github.com/JesseHantula/ot-harjoitustyo/releases/tag/Week5)
 #### [Week 6](https://github.com/JesseHantula/ot-harjoitustyo/releases/tag/Week6)
+#### [Final Release](https://github.com/JesseHantula/ot-harjoitustyo/releases/tag/Final)
 ## Set-up
 Install dependencies with:
 
