@@ -3,9 +3,9 @@
 This is the user manual for the project. It contains information about how to use the project and how to set it up.
 
 ## Installing the project
-The project can be installed by cloning the repository and installing the required packages. This can be done by running the following commands in the terminal:
+The project can be installed by cloning the repository and installing the required packages. This can be done by running the following commands in the terminal (put link to repository after git clone):
 ```bash
-git clone *repository*
+git clone 
 cd poker
 ```
 ## Running the project
