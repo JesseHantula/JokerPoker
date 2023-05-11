@@ -6,6 +6,7 @@ This project contains a simple version of the game Joker Poker. All information 
 #### [Architecture](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/architecture.md)
 #### [Changelog](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/changelog.md)
 #### [User Manual](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/usermanual.md)
+#### [Testing Report](https://github.com/JesseHantula/ot-harjoitustyo/blob/master/documentation/testingreport.md)
 ## Project Releases
 #### [Week 5](https://github.com/JesseHantula/ot-harjoitustyo/releases/tag/Week5)
 #### [Week 6](https://github.com/JesseHantula/ot-harjoitustyo/releases/tag/Week6)
